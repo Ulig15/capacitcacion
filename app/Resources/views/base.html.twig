@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>
+            {% block title %}Capacitacion de Symfony 3.2{% endblock %}
+        </title>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+
+        <!-- Optional theme -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css">
+        <!-- Latest compiled and minified JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+        <style type="text/css">
+            .btn-form-category{
+                margin: 10px 0px;
+            }
+
+            .form-mb{
+                margin-bottom: 10px;
+            }
+
+            div.form-group
+            {
+                border: 1px solid #ddd !important;
+                margin: 0;
+                padding: 10px;
+                position: relative;
+                border-radius:4px;
+                padding-left:10px!important;
+                display: flex;
+            }
+
+        </style>
+    </head>
+    {% block body %}
+        <header>
+            <nav class="navbar navbar-default">
+              <div class="container-fluid">
+                <div class="navbar-header">
+                  <a class="navbar-brand" href="javascript:;">CRUD de Symfony</a>
+                </div>
+
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                  <ul class="nav navbar-nav">
+                  </ul>
+                </div>
+              </div>
+            </nav>
+        </header>
+
+            <ul class="menu">
+                <li><a href="{{ path('team_list') }}">EQUIPOS</a></li>
+                <li><a href="{{ path('matches_list') }}">PARTIDOS</a></li>
+                <li><a href="{{ path('team_table') }}">TABLA DE POSICIONES</a></li>
+            </ul>
+    {% endblock %}
+    {% block javascripts %}{% endblock %}
+</html>

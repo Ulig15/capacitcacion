@@ -1,0 +1,91 @@
+{{ form_start(form, {'action': '' , 'method':'POST'}) }}
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>
+        {% block title %}Capacitacion de Symfony 3.2{% endblock %}
+    </title>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css">
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+    <style type="text/css">
+        .btn-form-category{
+            margin: 10px 0px;
+        }
+
+        .form-mb{
+            margin-bottom: 10px;
+        }
+
+        div.form-group
+        {
+            border: 1px solid #ddd !important;
+            margin: 0;
+            padding: 10px;
+            position: relative;
+            border-radius:4px;
+            padding-left:10px!important;
+            display: flex;
+        }
+    </style>
+</head>
+
+    <div class="row">
+
+        {% for flashMessage in app.session.flashbag.get('success') %}
+            <div class="alert alert-success">
+                {{ flashMessage }}
+            </div>
+        {% endfor %}
+
+        <div class="col-md-12 form-mb">
+            {% if form.localteam is defined  %}
+                {{ form_label(form.localteam) }}
+                {{ form_widget(form.localteam) }}
+            {% endif %}
+        </div>
+
+        <div class="col-md-12 form-mb">
+            {% if form.localgoals is defined  %}
+                {{ form_label(form.localgoals) }}
+                {{ form_widget(form.localgoals) }}
+            {% endif %}
+        </div>
+
+        <div class="col-md-12 form-mb">
+            {% if form.visitteam is defined  %}
+                {{ form_label(form.visitteam) }}
+                {{ form_widget(form.visitteam) }}
+            {% endif %}
+        </div>
+
+        <div class="col-md-12 form-mb">
+            {% if form.visitgoals is defined  %}
+                {{ form_label(form.visitgoals) }}
+                {{ form_widget(form.visitgoals) }}
+            {% endif %}
+        </div>
+
+        <div class="col-md-12 form-mb">
+            {% if form.date is defined  %}
+                {{ form_label(form.date) }}
+                {{ form_widget(form.date) }}
+            {% endif %}
+        </div>
+
+        <div class="col-md-12 form-mb">
+            {% if form.submit is defined  %}
+                {{ form_label(form.submit) }}
+                {{ form_widget(form.submit) }}
+            {% endif %}
+        </div>
+    </div>
+{{ form_end(form) }}

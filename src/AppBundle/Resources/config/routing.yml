@@ -1,0 +1,43 @@
+#  EQUIPOS
+
+team_index:
+    path: /
+    defaults: { _controller: AppBundle:Team:index }
+
+team_list:
+    path: /team/list
+    defaults: { _controller: AppBundle:Team:list }
+
+team_new:
+    path: /team/new
+    defaults: { _controller: AppBundle:Team:new }
+
+team_edit:
+    path: /team/edit/{id}
+    defaults: {_controller: AppBundle:Team:edit}
+
+team_delete:
+    path: /team/delete/{id}
+    defaults: {_controller: AppBundle:Team:delete}
+
+team_table:
+    path: /table
+    defaults: { _controller: AppBundle:Team:table }
+
+# PARTIDOS
+
+matches_list:
+    path: /matches/list
+    defaults: { _controller: AppBundle:Matches:list }
+
+matches_new:
+    path: /matches/new
+    defaults: { _controller: AppBundle:Matches:new }
+
+matches_edit:
+    path: /matches/edit/{id}
+    defaults: {_controller: AppBundle:Matches:edit}
+
+matches_delete:
+    path: /matches/delete/{id}
+    defaults: {_controller: AppBundle:Matches:delete}
