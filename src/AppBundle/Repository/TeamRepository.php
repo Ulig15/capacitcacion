@@ -39,4 +39,5 @@ class TeamRepository extends EntityRepository
             ->getQuery()
             ->getResult();
     }
+
 }
